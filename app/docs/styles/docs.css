@@ -6,7 +6,7 @@ body{
 	line-height:55px; 
 	background: #000 url(../images/header_bg.png);
 }
-nav{
+.nav{
 	float:right;
 }
 li{

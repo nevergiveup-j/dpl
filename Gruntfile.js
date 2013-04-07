@@ -190,7 +190,7 @@ module.exports = function(grunt) {
         }
 
         grunt.task.run([
-            'clean:dist',
+            'clean:debug',
             'compass:debug',
             'jade:debug',
             'livereload-start',
@@ -203,7 +203,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('build', [
-        'clean:debug',
+        'clean:dist',
         'clean:dist',
         'compass:dist',
         'jade:dist',
