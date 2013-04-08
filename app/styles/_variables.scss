@@ -1,13 +1,8 @@
 //
-// Variables
+// 全局变量
 // --------------------------------------------------
 
-
-// Global values
-// --------------------------------------------------
-
-
-// Grays
+// 黑白色
 // -------------------------
 $black:                 #000 !default;
 $grayDarker:            #222 !default;
@@ -18,9 +13,9 @@ $grayLighter:           #eee !default;
 $white:                 #fff !default;
 
 
-// Accent colors
+// 彩色
 // -------------------------
-$blue:                  #049cdb !default;
+$blue:                  #049cdb !default; 
 $blueDark:              #0064cd !default;
 $green:                 #46a546 !default;
 $red:                   #9d261d !default;
@@ -32,25 +27,25 @@ $purple:                #7a43b6 !default;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+$bodyBackground:        $white !default; //页面背景
+$textColor:             $grayDark !default; //页面字体色
 
 
-// Links
+// 链接
 // -------------------------
-$linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
+$linkColor:             #08c !default; //链接色
+$linkColorHover:        darken($linkColor, 15%) !default;//链接hover时字体色变暗15%
 
 
-// Typography
+// 排版
 // -------------------------
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          14px !default;
+$baseFontSize:          14px !default; //基础字体大小
 $baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        20px !default;
+$baseLineHeight:        20px !default; //基础行高
 $altFontFamily:         $serifFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
@@ -107,7 +102,7 @@ $btnInverseBackground:              #444 !default;
 $btnInverseBackgroundHighlight:     $grayDarker !default;
 
 
-// Forms
+// 表单
 // -------------------------
 $inputBackground:               $white !default;
 $inputBorder:                   #ccc !default;
@@ -149,13 +144,13 @@ $zindexModalBackdrop:     1040 !default;
 $zindexModal:             1050 !default;
 
 
-// Sprite icons path
+// 雪碧图路径
 // -------------------------
 $iconSpritePath:          image-path("glyphicons-halflings.png") !default;
 $iconWhiteSpritePath:     image-path("glyphicons-halflings-white.png") !default;
 
 
-// Input placeholder text color
+// 文本框占位文本色
 // -------------------------
 $placeholderText:         $grayLight !default;
 

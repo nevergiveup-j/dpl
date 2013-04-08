@@ -1,19 +1,19 @@
 
 // 全局变量和mixins
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // Reset
-@import 'modules/reset';
+@import "modules/reset";
 
 // 页面结构
-@import 'modules/scaffolding';
+@import "modules/scaffolding";
 
 // 常用组件
-@import 'modules/forms';
-@import 'modules/buttons';
-@import 'modules/navs';
+@import "modules/forms";
+@import "modules/buttons";
+@import "modules/navs";
 
 
 // 功能类，如.hide,.show等
-@import 'modules/utilities';
+@import "modules/utilities";
