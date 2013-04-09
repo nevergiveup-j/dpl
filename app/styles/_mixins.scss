@@ -115,15 +115,6 @@
 // FONTS
 // --------------------------------------------------
 
-@mixin font-family-serif() {
-  font-family: $serifFontFamily;
-}
-@mixin font-family-sans-serif() {
-  font-family: $sansFontFamily;
-}
-@mixin font-family-monospace() {
-  font-family: $monoFontFamily;
-}
 @mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
   font-size: $size;
   font-weight: $weight;
@@ -490,7 +481,7 @@
   border-bottom: 1px solid $bottom;
 }
 
-// Button backgrounds
+// 按钮背景
 // ------------------
 @mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9

@@ -25,28 +25,24 @@ $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
 
 
-// Scaffolding
-// -------------------------
+// 基础架构
 $bodyBackground:        $white !default; //页面背景
 $textColor:             $grayDark !default; //页面字体色
 
 
 // 链接
-// -------------------------
 $linkColor:             #08c !default; //链接色
 $linkColorHover:        darken($linkColor, 15%) !default;//链接hover时字体色变暗15%
 
 
-// 排版
-// -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+// 基础字体
+$baseFontFamily:        "Hiragino Sans GB","Microsoft Yahei",\5b8b\4f53 !default;
+
+//按钮字体
+$btnFontFamily:         \5B8B\4F53,\5FAE\8F6F\96C5\9ED1 !default;//宋体，微软雅黑
 
 $baseFontSize:          14px !default; //基础字体大小
-$baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default; //基础行高
-$altFontFamily:         $serifFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
@@ -209,7 +205,7 @@ $navbarInverseSearchPlaceholderColor:    #ccc !default;
 $navbarInverseBrandColor:                $navbarInverseLinkColor !default;
 
 
-// Pagination
+// 分页
 // -------------------------
 $paginationBackground:                #fff !default;
 $paginationBorder:                    #ddd !default;

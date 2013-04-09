@@ -7,4 +7,3 @@ design pattern library for aliyun.com
 
 环境安装方法详见
 <http://chaoren1641.github.io/Automation-FrontEnd-Environment/>
-test
