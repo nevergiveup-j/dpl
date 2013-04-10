@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         watch: {
             compass: {
                 files: ['app/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass']
+                tasks: ['compass:debug']
             },
             jade: {
                 files: ['app/{,*/}*.jade', 'app/{,*/}*.html'],
@@ -21,9 +21,9 @@ module.exports = function(grunt) {
             },
             copy: {
                 files: [
-                    'app/{,*/}/styles/{,*/}*.css',
-                    'app/{,*/}/scripts/{,*/}*.js',
-                    'app/{,*/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
+                    'app/{,*/,**/}/styles/{,*/}*.css',
+                    'app/{,*/,**/}/scripts/{,*/}*.js',
+                    'app/{,*/,**/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
                 tasks: ['copy:debug']
             },
             livereload: {

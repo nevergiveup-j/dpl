@@ -9,7 +9,7 @@ body{
 .nav{
 	float:right;
 }
-li{
+.nav li{
 	float:left;
 	height:55px;
 	line-height:55px; 
@@ -17,4 +17,13 @@ li{
 	list-style:none;
 	width:100px;
 	text-align:center;
+}
+.topbar{
+	height:25px;
+}
+.leftbar{
+	
+}
+.content{
+	background-color:#fff;
 }
