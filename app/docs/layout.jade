@@ -7,23 +7,25 @@
     html(class="no-js ie8 oldie", lang="zh-cn")
 // [if gt IE 8] <!
 html(class="no-js", lang="zh-cn")
-    // <![endif]
+  // <![endif]
   head
-    block title
+    block titleName
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     link(rel='stylesheet', href='../styles/aliyun.css')
+    link(rel='stylesheet', href='../styles/aliyun-responsive.css')
     link(rel='stylesheet', href='styles/docs.css')
     link(rel='stylesheet', href='../script/google-code-prettify/prettify.css')
-  body.row-fluid
-    .navbar.span12
-      img(src='images/logo.png');
-      ul.nav.pull-right
-        li 关于规范
-        li 功能单元件
-        li 组合应用件
-    .topbar
-    .leftbar.span1
-      block leftbar
-    .content.span11
-      block content
-    script(src='../script/google-code-prettify/prettify.js')
+  body
+    .row-fluid
+      .navbar.span12
+        img(src='images/logo.png');
+        ul.nav.pull-right
+          li 关于规范
+          li 功能单元件
+          li 组合应用件
+      .topbar
+      .leftbar.span1
+        block leftbar
+      .content.span11
+        block content
+      script(src='../script/google-code-prettify/prettify.js')
