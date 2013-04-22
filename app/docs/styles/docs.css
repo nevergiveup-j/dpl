@@ -1,5 +1,6 @@
 body{
 	background:url(../images/body_bg.png);
+	margin:44px;
 }
 .navbar{
 	height:55px;

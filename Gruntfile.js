@@ -11,32 +11,22 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch: {
+            scripts: {
+                files: ['app/**/*.{js,css,png,jpg,jpeg,webp}'],
+                tasks: ['copy:debug','livereload']
+            },
             compass: {
-                files: ['app/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:debug']
+                files: ['app/**/*.scss'],
+                tasks: ['compass:debug','livereload']
             },
             jade: {
-                files: ['app/{,*/}*.jade', 'app/{,*/}*.html'],
-                tasks: ['jade:debug']
-            },
-            copy: {
-                files: [
-                    'app/{,*/,**/}/styles/{,*/}*.css',
-                    'app/{,*/,**/}/scripts/{,*/}*.js',
-                    'app/{,*/,**/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
-                tasks: ['copy:debug']
-            },
-            livereload: {
-                files: [
-                    'app/{,*/}/styles/{,*/}*.css',
-                    'app/{,*/}/scripts/{,*/}*.js',
-                    'app/{,*/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
-                tasks: ['livereload']
+                files: ['app/**/*.jade'],
+                tasks: ['jade:debug','livereload']
             }
         },
         connect: {
             options: {
-                port: 9000,
+                port: 2013,
                 hostname: '0.0.0.0'
             },
             livereload: {
@@ -44,15 +34,6 @@ module.exports = function(grunt) {
                     middleware: function(connect) {
                         return [
                         lrSnippet,
-                        mountFolder(connect, '.tmp'),
-                        mountFolder(connect, 'app')];
-                    }
-                }
-            },
-            debug: {
-                options: {
-                    middleware: function(connect) {
-                        return [
                         mountFolder(connect, '.tmp'),
                         mountFolder(connect, 'app')];
                     }
@@ -155,34 +136,21 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'app',
-                    src: ['images/*','scripts/*'],
+                    src: ['**/*.{css,js,png,jpg,jpeg}'],
                     dest: '.tmp/'
-                },
-                {
-                    expand: true,
-                    cwd: 'app/docs',
-                    src: ['images/*','scripts/*','styles/*'],
-                    dest: '.tmp/docs'
                 }]
             },
             dist: {
                 files: [{
                     expand: true,
                     cwd: 'app',
-                    src: ['images/*','scripts/*'],
+                    src: ['**/*.{css,js,png,jpg,jpeg}'],
                     dest: '.dist/'
-                },
-                {
-                    expand: true,
-                    cwd: 'app/docs',
-                    src: ['images/*','scripts/*','styles/*'],
-                    dest: '.dist/docs'
                 }]
             }
         }
     });
 
-    grunt.renameTask('regarde', 'watch');
 
     grunt.registerTask('server', function(target) {
         if (target === 'dist') {
@@ -197,10 +165,12 @@ module.exports = function(grunt) {
             'connect:livereload',
             'copy:debug',
             'open',
-            'jshint',
             'watch']);
     });
 
+    grunt.registerTask('test', [
+        
+    ]);
 
     grunt.registerTask('build', [
         'clean:dist',
@@ -212,5 +182,5 @@ module.exports = function(grunt) {
         'copy:dist']);
 
     grunt.registerTask('default', [
-        'server']);
+        'server','jshint']);
 };
